@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
+//apply plugin: 'kotlin-android-extensions'
 
 buildscript {
     repositories {
@@ -14,6 +14,9 @@ buildscript {
 android {
     compileSdkVersion 28
 
+    buildFeatures {
+        viewBinding true
+    }
     defaultConfig {
         minSdkVersion 19
         targetSdkVersion 26
