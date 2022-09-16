@@ -2,7 +2,7 @@ package cn.mahua.vod;
 
 public class ApiConfig {
 
-    public static final String BASE_URL = "http://tv8.bjwmsc.com/api.php/";
+    public static final String BASE_URL = "http://tv.bjwmsc.com/api.php/";
     public static final String getStart = "v1.main/startup";
     public static final String getTypeList = "v1.vod/types";
     public static final String getBannerList = "v1.vod";

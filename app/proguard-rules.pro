@@ -510,7 +510,7 @@ public static final int *;
       <init>(android.content.Context);
 }
 
-#####################################  乐播   ###########################################
+#####################################  微梦   ###########################################
 ## 海信
 -keep class com.hisense.**{*;}
 -dontwarn com.hisense.**
@@ -523,7 +523,7 @@ public static final int *;
 ###ijk
 -keep class lebotv.** { *; }
 -dontwarn lebotv.**
-#######  乐播
+#######  微梦
 -dontwarn com.hpplay.**
 -keep class com.hpplay.**{*;}
 -keep class com.hpplay.**$*{*;}
