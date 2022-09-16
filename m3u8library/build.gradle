@@ -5,6 +5,10 @@ apply plugin: 'kotlin-android-extensions'
 buildscript {
     repositories {
         jcenter()
+//        mavenCentral()
+        google()
+        mavenCentral()
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
     }
     dependencies {
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
@@ -14,6 +18,9 @@ buildscript {
 android {
     compileSdkVersion 28
 
+//    buildFeatures {
+//        viewBinding true
+//    }
     defaultConfig {
         minSdkVersion 19
         targetSdkVersion 26
