@@ -32,6 +32,9 @@ public class RetryWhen implements Function<Observable<Throwable>, ObservableSour
     @Override
     public ObservableSource<?> apply(Observable<Throwable> throwableObservable) {
         return throwableObservable.flatMap((Function<Throwable, ObservableSource<?>>) throwable -> {
+            System.out.println("=========tmeng异常===========");
+            System.out.println(throwable);
+
             //等于-1的时候无限重试
             if (maxCount == -1) {
                 return Observable.timer(trySeconds, TimeUnit.SECONDS);

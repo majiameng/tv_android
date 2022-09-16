@@ -97,7 +97,7 @@ public class VodBean implements BannerData, Vod, Parcelable {
     private int vod_is_hot;
     private String vod_custom_tag;
     private TypeBean type;
-    private String type_1;
+    private TypeBean type_1;
     //    private List<VodBean> rel_vods;// 关联视频 数据结构同视频列表，不包含分页数据结构
     private int comment_num; // 评论数量
     /**
@@ -884,13 +884,17 @@ public class VodBean implements BannerData, Vod, Parcelable {
         this.type = type;
     }
 
-    public String getType_1() {
-        return type_1;
-    }
-
-    public void setType_1(String type_1) {
+    public void setType_1(TypeBean type_1) {
         this.type_1 = type_1;
     }
+
+//    public String getType_1() {
+//        return type_1;
+//    }
+//
+//    public void setType_1(String type_1) {
+//        this.type_1 = type_1;
+//    }
 
 //    public List<VodBean> getRel_vods() {
 //        return rel_vods;
@@ -1047,7 +1051,7 @@ public class VodBean implements BannerData, Vod, Parcelable {
         dest.writeInt(this.vod_is_hot);
         dest.writeString(this.vod_custom_tag);
         dest.writeSerializable(this.type);
-        dest.writeString(this.type_1);
+        dest.writeSerializable(this.type_1);
         dest.writeInt(this.comment_num);
     }
 
@@ -1138,7 +1142,7 @@ public class VodBean implements BannerData, Vod, Parcelable {
         this.vod_is_hot = in.readInt();
         this.vod_custom_tag = in.readString();
         this.type = (TypeBean) in.readSerializable();
-        this.type_1 = in.readString();
+        this.type_1 = (TypeBean) in.readSerializable();
         this.comment_num = in.readInt();
     }
 
